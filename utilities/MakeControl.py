@@ -10,15 +10,15 @@ import numpy as np
 import os 
 
 #--Directory
-harm_dir = r'C:\Users\sml\Desktop\tz\validation'
+harm_dir = '/home/slawler/Desktop/tz/harmonics'
 
 #--station to write to file
 s = '8594900'
 
 #--Test Files
-harmonic_file = os.path.join(harm_dir, 'elev_hc.out')
+harmonic_file = os.path.join(harm_dir, 'nwm_station_harmonics.out')
 station_file = os.path.join(harm_dir, 'PredictionPoints.in')
-output_file = os.path.join(harm_dir, 'sample.ctl')
+output_file = os.path.join(harm_dir, '{}.ctl'.format(s))
 
 
 

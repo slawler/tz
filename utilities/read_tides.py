@@ -10,9 +10,10 @@ import os
 
 tide_dir = r'C:\Users\sml\Desktop\tz\validation'
 
+stationname = '8594900'
 
-adcirc_file = os.path.join(tide_dir, 'adcirc_predict_feb_dc.txt')
-noaa_file = os.path.join(tide_dir, 'noaa_prediction_feb_dc.txt')
+adcirc_file = os.path.join(tide_dir, '{}.txt'.format(stationname))
+#noaa_file = os.path.join(tide_dir, 'noaa_prediction_feb_dc.txt')
 startline = 6
 heights = []
 
@@ -38,6 +39,10 @@ df = pd.DataFrame(heights, dtype = float, columns = ['Water Surface'], index = d
 fig, ax = plt.subplots()
 ax.plot(x, y, color = 'b')
 
+
+'''
+
+#USE THIS SECTION FOR COMPARING AGAINST NOAA CONTROL FILE
 x = df.index
 y = df['Water Surface']
 
@@ -68,3 +73,4 @@ ax.grid()
 
 #fig.savefig('feb.png', figsize=(3, 11), dpi=600, facecolor='w', edgecolor='k')
 #fig.show()
+'''
