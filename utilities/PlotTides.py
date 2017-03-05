@@ -1,24 +1,52 @@
+#!/usr/bin/env python 3.5.2
 # -*- coding: utf-8 -*-
 """
-python 3
-slawler@dewberry.com
+@author: slawler@dewberry.com
+Created on Sun Feb 19 09:35:33 2017
 
+
+###############################################################################
+
+PlotTides.py                   USAGE NOTES
+
+
+In User Inputs, make the following changes:
+    (Assumes Repo cloned from github with directory structure in tact)
+    
+# Required Variables    
+    1. Assign directory path, filenames & Start date
+    
+# Optional Changes   
+    2. Not Implemented: import addtional files to evaulate sensitivity
+
+###############################################################################
 """
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-tide_dir = r'C:\Users\sml\Desktop\tz\validation'
+#----Required Variables
 
-stationname = '8594900'
+root_dir = r'C:\Users\sml\Desktop\tz' #--Root Directory
+prediction_file = 'feb_cbbt_95.out'   # output file from ntp4 (station data by month)
+start = pd.datetime(2017, 2,1, 0)
 
-adcirc_file = os.path.join(tide_dir, '{}.txt'.format(stationname))
-#noaa_file = os.path.join(tide_dir, 'noaa_prediction_feb_dc.txt')
+
+# Optional Changes  
+prediction_file_2 = 'feb_cbbt_95_2.out' # output file from ntp4 (differnt adcirc run for same station)
+
+
+#----------------------------------RUN SCRIPT--------------------------------#
+tides  = os.path.join(root_dir, 'predictions')
+tides  = os.path.join(tides, 'outputs')
+tides  = os.path.join(tides, prediction_file)
+
 startline = 6
 heights = []
 
 j=0
-with open(adcirc_file) as f:
+with open(tides) as f:
     for i in range(68):  
         try:
             if i < startline:
@@ -32,9 +60,11 @@ with open(adcirc_file) as f:
         except:
             break
 
-start = pd.datetime(2017, 2,1, 0)
+
 dtm = pd.date_range(start = start, freq = 'H' , periods= len(heights))
 df = pd.DataFrame(heights, dtype = float, columns = ['Water Surface'], index = dtm)          
+x = df.index
+y = df['Water Surface']
 
 fig, ax = plt.subplots()
 ax.plot(x, y, color = 'b')
@@ -42,7 +72,7 @@ ax.plot(x, y, color = 'b')
 
 '''
 
-#USE THIS SECTION FOR COMPARING AGAINST NOAA CONTROL FILE
+#USE THIS SECTION FOR COMPARING AGAINST NOAA CONTROL FILE or ADCIRC RESULTS
 x = df.index
 y = df['Water Surface']
 
