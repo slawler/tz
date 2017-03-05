@@ -11,6 +11,5 @@ Included: Code and related files for tidal prediction.
 4. Required files: : .ctl file for desired location
 
 #### Usage Notes
-1. ./ntp4 <'file.ctl'> newfile.out
-2. See NOTE for details
+1. See NOTE for details
 
