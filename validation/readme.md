@@ -1,7 +1,7 @@
 # Validation Folder
 
-! Under Construction!
-
+! Under Construction !
+<img src="8632867_90d_ec95.png">
 ### Test Plots for select stations: 
 1. NOAA Predictions in red
 2. Generated Predictions in blue
