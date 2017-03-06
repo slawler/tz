@@ -28,8 +28,9 @@ import os
 
 #----Required Variables
 
-root_dir = r'C:\Users\sml\Desktop\tz' #--Root Directory
-prediction_file = 'feb_cbbt_95.out'   # output file from ntp4 (station data by month)
+#root_dir = r'C:\Users\sml\Desktop\tz' #--Root Directory
+root_dir = '/Users/slawler/Desktop/tz'
+prediction_file = '8632837_feb17.out'   # output file from ntp4 (station data by month)
 start = pd.datetime(2017, 2,1, 0)
 
 

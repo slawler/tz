@@ -32,17 +32,18 @@ import os
 
 #----Required Variables
 
-root_dir = r'C:\Users\sml\Desktop\tz' #--Root Directory
+#root_dir = r'C:\Users\sml\Desktop\tz' #--Root Directory
+root_dir = '/Users/slawler/Desktop/tz'
 poi_file = 'poi.in'                   # Stations File (poi.in)
 h_constits = 'elev_hc.out'            # dbex output file (elev_hc.out)
 dtm = '020128'                        # Month, start day, endday ('020128')
-datum_dict = {'8594900': '001548'} # Datum Dictionary for ctl file
+datum_dict = {'8594900': '001548'}    # Datum Dictionary for ctl file
 
 
 #-----Optional Changes 
 
 #CTL Header Data
-line_1 = '1      859-4900 Washington, D.C.    T.M. 75 W.     Used 2001->           8594900'
+line_1 = '1      000-0000 ----------------    T.M. 75 W.     Used 2001->           0000000'
 
 # Year Data
 line_9 = '2017 0 1103228621000   01032 241 906  5310642124 847283910981386 9352915   1   1'

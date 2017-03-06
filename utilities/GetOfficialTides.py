@@ -14,10 +14,10 @@ import matplotlib.pyplot as plt
 
          
 # Start date (year, month, day)
-y0, m0 ,d0 = 2017, 2, 10         
-y1, m1 ,d1 = 2017, 2, 27    
+y0, m0 ,d0 = 2017, 2, 1         
+y1, m1 ,d1 = 2017, 2, 28    
   
-noaa_gage = '8594900'
+noaa_gage = '8632837'
 usgs_gage = '01646500'
 
 #USGS parameter
@@ -31,7 +31,7 @@ stop      = datetime(y1, m1 ,d1,0)
 def GetTidePrediction(gage, start, stop):   
     #--NOAA API https://tidesandcurrents.noaa.gov/api/
     datum     = "msl"   #"NAVD"                  #Datum
-    units     = "metric"                         #Units
+    units     = "english"                         #Units
     time_zone = "gmt"                         #Time Zone
     fmt       = "json"                            #Format
     url       = 'http://tidesandcurrents.noaa.gov/api/datagetter'
@@ -177,7 +177,7 @@ y1 = df[noaa_gage]  #Y-axis 1 = predicted
 #merge.drop(axis = 1,labels = ["qualifiers"], inplace=True )
 
 
-plt.plot(x, y1)  
+plt.plot(x, y1, 'r')  
 #plt.plot(x, y2)  
 #plt.plot(x, y3)
 
