@@ -2,7 +2,7 @@
 
 Development repo of scripts to analyze & predict surface water in transition zones. 
 
-#### Directories
+### Directories
 1. harmonics: 
 	data &  binaries for extracting harmonic constituents from ADCIRC runs
 	[source code](http://adcirc.org/products/adcirc-tidal-databases/)
@@ -15,20 +15,20 @@ Development repo of scripts to analyze & predict surface water in transition zon
 
 4. validation: python scripts to retrieve NOAA coops predictions for validation.
 
-#### Usage Notes
-1. Extract Harmonic Constituents for points of interest (poi):
+### Usage Notes
+##### 1. Extract Harmonic Constituents for points of interest (poi):
 a. cd to harmonics, see usage notes
 
-2. Create Control File(s) 
+##### 2. Create Control File(s) 
 a. cd to utilities, run MakeCTL.py (follow instructions in script header)
 
-3. Run NTP4 to create tide tables
+##### 3. Run NTP4 to create tide tables
 a. cd to predictions, see usage notes
 
-4. Format NTP4 output, plot results
+##### 4. Format NTP4 output, plot results
 a. cd to utilities, run PlotTides.py
 
-5. Validate results against gaged locations
+##### 5. Validate results against gaged locations
 a. Under Constructions==> add script to write new file for:
-1. Official Predictions
-2. Predcitions created using ADCIRC results & programs included in this repo	
+	1. Official Predictions
+	2. Predcitions created using ADCIRC results & programs included in this repo	
