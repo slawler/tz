@@ -6,6 +6,7 @@ Included: Code and related files for tidal prediction.
 2. Executables:
 	1. ntp4 (linux)
 	2. ntp4_w7 (windows 7)
+	3. ntp4_mac (macos)
 
 3. YEARDATA: Required, included in control file as described in NOTE
 4. Required files: : .ctl file for desired location

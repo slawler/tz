@@ -18,3 +18,6 @@
 
 ##### WriteTideTable (inputs): 
     1. tidefile
+
+##### SensitivityPlotter (inputs): 
+    1. tidefile, start/end date    

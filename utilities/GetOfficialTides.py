@@ -17,11 +17,11 @@ import matplotlib.pyplot as plt
 y0, m0 ,d0 = 2017, 2, 1         
 y1, m1 ,d1 = 2017, 2, 28    
   
-noaa_gage = '8632837'
-usgs_gage = '01646500'
+noaa_gage = '8651370'
+#usgs_gage = '01646500'
 
 #USGS parameter
-flow = "00060"  
+#flow = "00060"  
 
 # Create Datetime Objects
 start     = datetime(y0, m0, d0,0)    
@@ -158,7 +158,8 @@ def Get_USGS(gage, parameter, start, stop):
     return df    
      
     
-df = GetTidePrediction(noaa_gage, start, stop)        
+df = GetTidePrediction(noaa_gage, start, stop)
+df.to_csv('/Users/slawler/Desktop/tz/predictions/outputs/{}_noaa_feb17.txt'.format(noaa_gage))        
 #df1 = GetTideObservation(noaa_gage, start, stop)    
 #df2 = Get_USGS(usgs_gage, flow, start, stop)    
 #df2['StreamFlow'] = df2['StreamFlow'].astype(float) 

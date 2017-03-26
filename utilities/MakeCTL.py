@@ -178,7 +178,7 @@ for s in  dfH:
     line_14 = dtm
     line_15 = '   0   0   0'
        
-    output_file = os.path.join(h_out_dir,'{}.ctl'.format(s))   
+    output_file = os.path.join(h_out_dir,'{}_90d.ctl'.format(s))   
     with open(output_file, 'w') as f:
         f.write(line_1 + '\n')
         f.write(line_2 + '\n')

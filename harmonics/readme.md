@@ -6,6 +6,7 @@ Included: Code and related files for extracting harmonic constituents from adcir
 2. Executables:
 	1. dbex (linux)
 	2. dbex_w7 (windows 7)
+	3. dbex_mac (macos)
 
 3. .mod files: required for harmonic extraction
 4. Required files: poi.in, fort.14, fort.53

@@ -1,9 +1,0 @@
-./ntp4_mac <8638999.ctl> 8638999_feb17.out
-./ntp4_mac <8638863.ctl> 8638863_feb17.out
-./ntp4_mac <8638614.ctl> 8638614_feb17.out
-./ntp4_mac <8637611.ctl> 8637611_feb17.out
-./ntp4_mac <8636580.ctl> 8636580_feb17.out
-./ntp4_mac <8578240.ctl> 8578240_feb17.out
-./ntp4_mac <8573364.ctl> 8573364_feb17.out
-./ntp4_mac <8632837.ctl> 8632837_feb17.out
-./ntp4_mac <8651370.ctl> 8651370_feb17.out
